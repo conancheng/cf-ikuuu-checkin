@@ -30,7 +30,7 @@
 
    | 变量名          | 必填 | 示例值                  | 说明                     |
    |-----------------|------|-------------------------|--------------------------|
-   | DOMAIN          | ✅  | `https://ikuuu.one`     | 签到服务域名             |
+   | DOMAIN          | ❌  | `https://ikuuu.one`     | 签到服务域名（默认已填写）|
    | EMAIL           | ✅  | `user@example.com`      | 登录邮箱                 |
    | PASSWORD        | ✅  | `SecurePassword123!`    | 登录密码                 |
    | TG_BOT_TOKEN    | ❌  | `123456:ABC-DEF1234`    | Telegram 机器人 Token    |
