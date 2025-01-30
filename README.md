@@ -49,7 +49,7 @@
 ## 使用指南
 
 ### 手动触发签到
-```
+
 访问你的 Worker 域名 + 触发路径：
 https://your-worker.your-subdomain.workers.dev/auto-checkin
 
@@ -113,4 +113,4 @@ MAX_RETRY = 5  # 最大重试次数
 
 > 📝 **许可证**  
 > 本项目采用 MIT 许可证 - 自由使用和修改，请遵守目标网站的服务条款
-``` 
+
