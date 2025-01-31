@@ -99,16 +99,27 @@ async function checkin() {
 
 async function sendTelegramNotification(message) {
   if (!config.TG_BOT_TOKEN || !config.TG_CHAT_ID) return;
-  
+
+  // Get current time in 'Asia/Shanghai' timezone
+  const timeString = new Date().toLocaleString('zh-CN', { 
+    timeZone: 'Asia/Shanghai',
+    hour12: false 
+  });
+
   const payload = {
     chat_id: config.TG_CHAT_ID,
-    text: message,
+    text: `🕒 执行时间: ${timeString}\n\n` +
+          `🌐 机场地址: ${maskString(config.DOMAIN)}\n` +
+          `📧 账户邮箱: ${maskString(config.EMAIL)}\n\n` +
+          `${message}`,
     parse_mode: 'HTML',
     disable_web_page_preview: true
   };
 
+  const telegramAPI = `https://api.telegram.org/bot${config.TG_BOT_TOKEN}/sendMessage`;
+  
   try {
-    const response = await fetch(`https://api.telegram.org/bot${config.TG_BOT_TOKEN}/sendMessage`, {
+    const response = await fetch(telegramAPI, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -120,6 +131,12 @@ async function sendTelegramNotification(message) {
   } catch (error) {
     console.error('Telegram通知异常:', error);
   }
+}
+
+function maskString(str, visibleStart = 2, visibleEnd = 2) {
+  if (!str) return '';
+  if (str.length <= visibleStart + visibleEnd) return str;
+  return `${str.substring(0, visibleStart)}****${str.substring(str.length - visibleEnd)}`;
 }
 
 function createHeaders(type = 'default') {
