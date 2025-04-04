@@ -22,9 +22,14 @@
 1. **创建新 Worker**
    - 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
    - 进入 Workers & Pages → 创建应用程序 → 点击Hello world 模板部署 Worker
-   - 点击编辑代码，进行第五步部署代码
+   - 点击编辑代码，进行部署代码
 
-2. **配置环境变量**
+2. **部署代码**
+   - 在「Quick Edit」编辑器界面
+   - 清空默认代码，粘贴[完整代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/worker.js)（多账号使用[多账号代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/多账号.js)）
+   - 点击 "保存并部署"
+
+3. **配置环境变量**
    - 在 Worker 设置 → 变量 中添加以下环境变量：
 
    | 变量名          | 必填 | 示例值                  | 说明                     |
@@ -38,14 +43,9 @@
    | MAX_RETRY       | ❌  | `3`                     | 最大重试次数（默认 3）   |
    | TRIGGER_PATH    | ❌  | `/auto-checkin`         | 手动触发路径（默认路径） |
 
-3. **配置定时任务**
+4. **配置定时任务**
    - 在 Worker → 触发器 → 添加 Cron 触发器
    - Cron表达式：`0 0 * * *` (UTC时间每天0点/北京时间8点)
-
-4. **部署代码**
-   - 在「Quick Edit」编辑器界面
-   - 清空默认代码，粘贴[完整代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/worker.js)（多账号使用[多账号代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/多账号.js)）
-   - 点击 "保存并部署"
 
 ## 使用指南
 
