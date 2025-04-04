@@ -33,16 +33,17 @@
    | DOMAIN          | ❌  | `https://ikuuu.one`     | 签到服务域名（默认已填写）|
    | EMAIL           | ✅  | `user@example.com`      | 登录邮箱                 |
    | PASSWORD        | ✅  | `SecurePassword123!`    | 登录密码                 |
+   | ACCOUNTS        | ✅  | "user1@mail.com&pass1&user2@mail.com&pass2"    | 多账号必填                 |
    | TG_BOT_TOKEN    | ❌  | `123456:ABC-DEF1234`    | Telegram 机器人 Token    |
    | TG_CHAT_ID      | ❌  | `-100123456789`         | Telegram 会话 ID         |
    | MAX_RETRY       | ❌  | `3`                     | 最大重试次数（默认 3）   |
    | TRIGGER_PATH    | ❌  | `/auto-checkin`         | 手动触发路径（默认路径） |
 
-3. **配置定时任务**
+4. **配置定时任务**
    - 在 Worker → 触发器 → 添加 Cron 触发器
    - Cron表达式：`0 0 * * *` (UTC时间每天0点/北京时间8点)
 
-4. **部署代码**
+5. **部署代码**
 1. 在「Quick Edit」编辑器界面
 2. 清空默认代码，粘贴[完整代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/worker.js)
 3. 点击 "保存并部署"
