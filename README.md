@@ -21,7 +21,7 @@
 
 1. **创建新 Worker**
    - 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
-   - 进入 Workers & Pages → 创建应用程序 → 创建 Worker
+   - 进入 Workers & Pages → 创建应用程序 → 点击Hello world 模板部署 Worker
 
 2. **配置环境变量**
    - 在 Worker 设置 → 变量 中添加以下环境变量：
