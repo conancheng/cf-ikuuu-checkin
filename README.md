@@ -14,7 +14,7 @@
 ### 前置要求
 
 1. Cloudflare 账户
-2. 可用的服务域名（用于签到）
+2. 可用的服务域名（可选）
 3. Telegram Bot Token & Chat ID（可选）
 
 ### 部署步骤
