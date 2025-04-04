@@ -43,7 +43,7 @@
 
 5. **部署代码**
 1. 在「Quick Edit」编辑器界面
-2. 清空默认代码，粘贴[完整代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/worker.js)（多账号使用[多账号代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/多账号.js）
+2. 清空默认代码，粘贴[完整代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/worker.js)（多账号使用[多账号代码](https://github.com/ly921002/cf-ikuuu-checkin/blob/main/多账号.js)）
 3. 点击 "保存并部署"
 
 ## 使用指南
